@@ -1,0 +1,185 @@
+\documentclass[journal]{IEEEtran}
+\IEEEoverridecommandlockouts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% PRINCIPALES PAQUETES %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+\usepackage{circuitikz}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{amsmath}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amssymb}
+%\usepackage{pgfplots}
+%\usepackage{color}
+%\usepackage{hyperref}
+%\usepackage{wrapfig}
+%\usepackage{array}
+\usepackage{multirow}
+%\usepackage{adjustbox}
+%\usepackage{nccmath}
+%\usepackage{subfigure}
+%\usepackage{amsfonts,latexsym} % para tener disponibilidad de diversos simbolos
+%\usepackage{enumerate}
+%\usepackage{booktabs}
+
+%\usepackage{threeparttable}
+\usepackage{array,colortbl}
+%\usepackage{ifpdf}
+%\usepackage{rotating}
+%\usepackage{cite}
+%\usepackage{stfloats}
+%\usepackage{url}
+%\usepackage{listings}
+\usepackage[spanish]{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CREAR Y REESCRIBIR ALGUNOS COMANDOS %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}  %% Se crea un nuevo tipo de columna llamada P.
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\newcommand{\ctt}{\centering\scriptsize\textbf} %%\ctt abrevia el comando \centering\scriptsize\textbf
+\newcommand{\dtt}{\scriptsize\textbf} %%\dtt abrevia el comando \scriptsize\textbf
+\renewcommand\IEEEkeywordsname{Palabras clave}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor} %% Con este comando se especifican como pueden seprarse las sílabas adecuadamente en caso una palabra quede en dos lineas diferentes de texto
+
+\graphicspath{ {figs/} }  %%Ruta donde se encuentran las imágenes, que esté vacio indica que las imagenes están dentro de la misma carpeta que contiene el archivo .tex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% ENCABEZADO DE LAS PÁGINAS TIPO UNIVERSIDAD CENTRAL %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MYhead}{\smash{\scriptsize
+\hfil\parbox[t][\height][t]{\textwidth}{\centering
+\begin{picture}(0,0) \put(-0,-15){\includegraphics[scale=0.08 ]{Fig/Logo_Escudo_Vertical.png}} \end{picture} \hspace{6.4cm}
+Laboratorio Electronica I  \hspace{5.15cm} Versión 1.1\\
+\hspace{6.2cm} FACULTAD DE INGENIERÍA \hspace{4.45cm} Periodo 2025-1\\
+\underline{\hspace{ \textwidth}}}\hfil\hbox{}}}
+\makeatletter
+% normal pages
+\def\ps@headings{%
+\def\@oddhead{\MYhead}%
+\def\@evenhead{\MYhead}}%
+% title page
+\def\ps@IEEEtitlepagestyle{%
+\def\@oddhead{\MYhead}%
+\def\@evenhead{\MYhead}}%
+\makeatother
+% make changes take effect
+\pagestyle{headings}
+% adjust as needed
+\addtolength{\footskip}{0\baselineskip}
+\addtolength{\textheight}{-1\baselineskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% INICIO DEL DOCUMENTO %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TÍTULO DEL DOCUMENTO %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Aplicación de transistores BJT (NE555).}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% AUTORES %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Fabián López Pérez (Código: 20232005069).} 
+
+% Comando que indica la generación del título
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%% RESUMEN %%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+.........................................
+\end{abstract}
+
+% En el resumen no se recomienda colocar citaciones bibliográficas.
+%%%%%%%%%%%%%%%%%%%%%%
+%%% PALABRAS CLAVE %%%
+%%%%%%%%%%%%%%%%%%%%%%
+\begin{IEEEkeywords}
+Corriente, Tensión, Capacitancia, Inductancia, análisis de circuitos, inductores, capacitores.
+\end{IEEEkeywords}
+%%%%%%%%%%%%%%%%%%%%%%
+%\IEEEpeerreviewmaketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PRIMERA SECCIÓN DEL DOCUMENTO %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{\textbf{Introducción.}}
+\IEEEPARstart{E}{} ..........................
+\section{\textbf{Objetivo.}}
+    \begin{itemize}
+        \item ....................................
+    \end{itemize}
+
+\section{\textbf{Marco teórico.}}
+           
+\section{\textbf{Requerimientos.}}
+    \vspace{0.2cm}
+    \subsection{\textbf{Elementos Funcionales necesarios.}}
+        \vspace{0.2cm}
+        \begin{itemize}
+            \item Protoboard.
+            \item IC NE555.
+            \item Capacitores.
+            \item Potenciómetros.
+            \item Resistores.
+            \item LEDS
+        \end{itemize}
+
+\section{\textbf{Procedimiento.}}
+    \subsection{Montaje Circuito.}    
+
+   
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=1\linewidth]{Fig/Montaje 1.PNG}
+            \caption{Montaje 1.}
+            \label{montaje1.}
+        \end{figure}
+    
+    
+    
+\section{\textbf{Resultados.}}
+
+    \begin{table}[ht]
+                \begin{center}
+                    \begin{tabular}{ |c|c|c|c| } 
+                        \hline
+                        $V_{c1}$&$V_{c2}$ &$V_{in}$ &$V_{out}$ \\
+                        \hline
+                        $15.57v$& $30.1v$ & $15.57vp$ & $30.1v $\\ 
+                        \hline
+                    \end{tabular}
+                \end{center} 
+                \caption{Valores del Montaje 1(Duplicador).}
+                \label{tabla:1}
+        \end{table}
+        
+\section{\textbf{Análisis de resultados.}}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\section{\textbf{Conclusiones.}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% BIBLIOGRAFIA %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{IEEEtran}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% FIN DEL DOCUMENTO %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
